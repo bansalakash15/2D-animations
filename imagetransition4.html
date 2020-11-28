@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<style type="text/css">
+
+		h1{
+		position: relative;
+		left: 4%;
+		}
+		body{
+			font-family: 'Poppins', sans-serif;
+		}
+
+
+		#pictureoverlay{
+			position: relative;
+			width: 50%;
+		}
+		.overlay{
+			position: absolute;
+			left: 100%;
+			bottom: 0;
+			height: 30%;
+			width: 0px;
+			background-color: rgba(140, 140, 140, 0.8);
+			transition: 2s ease-in-out;
+			
+		}
+
+		#pictureoverlay:hover .overlay{
+			width:100%; 
+			left: 0;
+
+		}
+
+		.text{
+			position: relative;
+			font-size: 36px;
+			z-index: 9;
+			visibility: hidden;
+			height: 0;
+			color: white;
+			text-align:center;
+			top: 35%;
+
+
+			transition: 1.5s ease-in;
+			transition-delay: 0.3s;
+			}
+		#pictureoverlay:hover .text{
+			visibility: visible;
+			
+		}
+		img{
+			width: 100%;
+			display:block;
+		}
+
+	</style>
+	
+
+	<title>Image</title>
+</head>
+<body>
+<h1>Photo Gallery Transition</h1>
+
+
+<div id="pictureoverlay">
+	<img class="image" src="https://picsum.photos/id/1005/800/1200">
+		<div class="overlay">
+	<div class="text">Person </div>
+		</div>
+</div>
+</body>
+</html>
